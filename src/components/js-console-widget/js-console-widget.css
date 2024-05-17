@@ -19,9 +19,6 @@
   border-radius: 5px;
   height: 200px;
   overflow-y: auto;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
 }
 
 .title {
@@ -42,6 +39,7 @@
   border-bottom: 1px solid var(--console-widget-log-border);
   background-color: var(--console-widget-log-background);
   padding: 5px;
+  width: 100%;
 }
 
 .log-section .log-line .log-level {

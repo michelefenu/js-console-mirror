@@ -1,0 +1,31 @@
+:host {
+  display: block;
+  font-family: sans-serif;
+  background: var(--console-widget-background, #333);
+  color: var(--console-widget-color, #fff);
+  font-size: var(--console-widget-font-size, 14px);
+  padding: 10px;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.console {
+  max-height: 300px;
+}
+
+.title {
+  position: fixed;
+  width: 100%;
+  font-size: 1.2rem;
+  margin-bottom: 8px;
+}
+
+.log-section {
+  padding-top: 28px;
+}
+
+.log {
+  font-family: monospace;
+  font-size: 0.8rem;
+}

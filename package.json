@@ -1,0 +1,58 @@
+{
+  "name": "js-console-widget",
+  "version": "0.0.1",
+  "description": "Stencil Component Starter",
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.js",
+  "types": "dist/types/index.d.ts",
+  "collection": "dist/collection/collection-manifest.json",
+  "collection:main": "dist/collection/index.js",
+  "unpkg": "dist/js-console-widget/js-console-widget.esm.js",
+  "exports": {
+    ".": {
+      "import": "./dist/js-console-widget/js-console-widget.esm.js",
+      "require": "./dist/js-console-widget/js-console-widget.cjs.js"
+    },
+    "./my-component": {
+      "import": "./dist/components/my-component.js",
+      "types": "./dist/components/my-component.d.ts"
+    },
+    "./js-console-widget": {
+      "import": "./dist/components/js-console-widget.js",
+      "types": "./dist/components/js-console-widget.d.ts"
+    },
+    "./loader": {
+      "import": "./loader/index.js",
+      "require": "./loader/index.cjs",
+      "types": "./loader/index.d.ts"
+    }
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ionic-team/stencil-component-starter.git"
+  },
+  "files": [
+    "dist/",
+    "loader/"
+  ],
+  "scripts": {
+    "build": "stencil build",
+    "start": "stencil build --dev --watch --serve",
+    "test": "stencil test --spec --e2e",
+    "test.watch": "stencil test --spec --e2e --watchAll",
+    "generate": "stencil generate"
+  },
+  "devDependencies": {
+    "@jest/transform": "^29.7.0",
+    "@stencil/core": "^4.18.1",
+    "@types/jest": "^29.5.12",
+    "@types/node": "^16.18.11",
+    "devtools-protocol": "^0.0.1302401",
+    "jest": "^29.7.0",
+    "jest-cli": "^29.7.0",
+    "jest-transform-stub": "^2.0.0",
+    "puppeteer": "^21.11.0",
+    "ts-jest": "^29.1.2"
+  },
+  "license": "MIT"
+}

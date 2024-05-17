@@ -17,12 +17,15 @@
   font-size: var(--console-widget-font-size, 14px);
   padding: 10px;
   border-radius: 5px;
-  max-height: 200px;
+  height: 200px;
   overflow-y: auto;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
 }
 
 .title {
-  font-size: 1.2rem;
+  font-size: 1.1rem;
   margin-bottom: 8px;
   color: var(--console-widget-title-color);
 }
@@ -44,6 +47,7 @@
 .log-section .log-line .log-level {
   display: inline-block;
   width: 50px;
+  font-weight: 600;
 }
 
 .log-section .log-line .info {

@@ -30,31 +30,46 @@ export class JsConsoleWidget {
   private originalInfo = console.info;
   private originalDebug = console.debug;
 
+  private isConsoleOverridden = false;
+
   componentWillLoad() {
-    console.log = (...args) => {
-      this.logs = [...this.logs, ...args.map(arg => ({ level: ErrorLevel.log, message: String(arg) }))];
-      this.originalLog.apply(console, args);
-    };
+    if (!this.isConsoleOverridden) {
+      console.log = (...args) => {
+        this.logs = [...this.logs, ...args.map(arg => ({ level: ErrorLevel.log, message: String(arg) }))];
+        this.originalLog.apply(console, args);
+      };
 
-    console.error = (...args) => {
-      this.logs = [...this.logs, ...args.map(arg => ({ level: ErrorLevel.error, message: String(arg) }))];
-      this.originalError.apply(console, args);
-    };
+      console.error = (...args) => {
+        this.logs = [...this.logs, ...args.map(arg => ({ level: ErrorLevel.error, message: String(arg) }))];
+        this.originalError.apply(console, args);
+      };
 
-    console.warn = (...args) => {
-      this.logs = [...this.logs, ...args.map(arg => ({ level: ErrorLevel.warn, message: String(arg) }))];
-      this.originalWarn.apply(console, args);
-    };
+      console.warn = (...args) => {
+        this.logs = [...this.logs, ...args.map(arg => ({ level: ErrorLevel.warn, message: String(arg) }))];
+        this.originalWarn.apply(console, args);
+      };
 
-    console.info = (...args) => {
-      this.logs = [...this.logs, ...args.map(arg => ({ level: ErrorLevel.info, message: String(arg) }))];
-      this.originalInfo.apply(console, args);
-    };
+      console.info = (...args) => {
+        this.logs = [...this.logs, ...args.map(arg => ({ level: ErrorLevel.info, message: String(arg) }))];
+        this.originalInfo.apply(console, args);
+      };
 
-    console.debug = (...args) => {
-      this.logs = [...this.logs, ...args.map(arg => ({ level: ErrorLevel.debug, message: String(arg) }))];
-      this.originalDebug.apply(console, args);
-    };
+      console.debug = (...args) => {
+        this.logs = [...this.logs, ...args.map(arg => ({ level: ErrorLevel.debug, message: String(arg) }))];
+        this.originalDebug.apply(console, args);
+      };
+
+      // Intercetta errori globali
+      window.onerror = (message, source, lineno, colno) => {
+        this.logs = [...this.logs, { level: ErrorLevel.error, message: `${message} at ${source}:${lineno}:${colno}` }];
+        return false; // Let the default handler run
+      };
+
+      // Intercetta promesse rifiutate non gestite
+      window.addEventListener('unhandledrejection', this.handlePromiseRejection);
+
+      this.isConsoleOverridden = true;
+    }
   }
 
   disconnectedCallback() {
@@ -63,6 +78,11 @@ export class JsConsoleWidget {
     console.warn = this.originalWarn;
     console.info = this.originalInfo;
     console.debug = this.originalDebug;
+
+    window.onerror = null;
+    window.removeEventListener('unhandledrejection', this.handlePromiseRejection);
+
+    this.isConsoleOverridden = false;
   }
 
   componentDidUpdate() {
@@ -71,6 +91,10 @@ export class JsConsoleWidget {
       this.logContainer.scrollTop = this.logContainer.scrollHeight;
     }
   }
+
+  handlePromiseRejection = (event: PromiseRejectionEvent) => {
+    this.logs = [...this.logs, { level: ErrorLevel.error, message: `Unhandled promise rejection: ${event.reason}` }];
+  };
 
   render() {
     return (

@@ -52,7 +52,10 @@
     "jest-cli": "^29.7.0",
     "jest-transform-stub": "^2.0.0",
     "puppeteer": "^21.11.0",
-    "ts-jest": "^29.1.2"
+    "ts-jest": "^29.1.2",
+    "@stencil/angular-output-target": "^0.8.4",
+    "@stencil/react-output-target": "^0.5.3",
+    "@stencil/vue-output-target": "^0.8.8"
   },
   "license": "MIT"
 }

@@ -8,20 +8,6 @@ import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
     interface JsConsoleWidget {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first": string;
-        /**
-          * The last name
-         */
-        "last": string;
-        /**
-          * The middle name
-         */
-        "middle": string;
-    }
 }
 declare global {
     interface HTMLJsConsoleWidgetElement extends Components.JsConsoleWidget, HTMLStencilElement {
@@ -30,37 +16,15 @@ declare global {
         prototype: HTMLJsConsoleWidgetElement;
         new (): HTMLJsConsoleWidgetElement;
     };
-    interface HTMLMyComponentElement extends Components.MyComponent, HTMLStencilElement {
-    }
-    var HTMLMyComponentElement: {
-        prototype: HTMLMyComponentElement;
-        new (): HTMLMyComponentElement;
-    };
     interface HTMLElementTagNameMap {
         "js-console-widget": HTMLJsConsoleWidgetElement;
-        "my-component": HTMLMyComponentElement;
     }
 }
 declare namespace LocalJSX {
     interface JsConsoleWidget {
     }
-    interface MyComponent {
-        /**
-          * The first name
-         */
-        "first"?: string;
-        /**
-          * The last name
-         */
-        "last"?: string;
-        /**
-          * The middle name
-         */
-        "middle"?: string;
-    }
     interface IntrinsicElements {
         "js-console-widget": JsConsoleWidget;
-        "my-component": MyComponent;
     }
 }
 export { LocalJSX as JSX };
@@ -68,7 +32,6 @@ declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
             "js-console-widget": LocalJSX.JsConsoleWidget & JSXBase.HTMLAttributes<HTMLJsConsoleWidgetElement>;
-            "my-component": LocalJSX.MyComponent & JSXBase.HTMLAttributes<HTMLMyComponentElement>;
         }
     }
 }

@@ -1,0 +1,14 @@
+{
+  "name": "js-console-mirror-example-vanilla",
+  "version": "0.0.1",
+  "description": "Example project to demonstrate js-console-mirror in a vanilla HTML setup.",
+  "main": "index.html",
+  "scripts": {
+    "start": "http-server -c-1 -p 8080"
+  },
+  "dependencies": {
+    "js-console-mirror": "^0.0.6",
+    "http-server": "^14.1.1"
+  },
+  "devDependencies": {}
+}

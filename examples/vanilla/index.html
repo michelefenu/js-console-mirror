@@ -3,12 +3,11 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JSConsole Mirror Example</title>
+    <title>JS Console Mirror Example</title>
+    <script type="module" src="./js-console-mirror/js-console-mirror.esm.js"></script>
     <script type="module">
-      import '/build/js-console-mirror.esm.js';
-
       setTimeout(() => {
-        console.log('Hello, Console Mirror!');
+        console.log('Hello, Consolemirror!');
         console.error('This is an error message.');
         console.warn('This is a warning message.');
         console.info('This is an info message.');
@@ -43,5 +42,13 @@
   </head>
   <body>
     <js-console-mirror></js-console-mirror>
+    <script>
+      // Test the console mirror by logging some messages
+      console.log('Hello, Console Mirror!');
+      console.error('This is an error message.');
+      console.warn('This is a warning message.');
+      console.info('This is an info message.');
+      console.debug('This is a debug message.');
+    </script>
   </body>
 </html>

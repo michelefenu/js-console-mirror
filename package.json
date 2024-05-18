@@ -1,25 +1,25 @@
 {
-  "name": "js-console-widget",
+  "name": "js-console-mirror",
   "version": "0.0.1",
-  "description": "Stencil Component Starter",
+  "description": "A virtual JavaScript console to test webapps in mobile browsers.",
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "types": "dist/types/index.d.ts",
   "collection": "dist/collection/collection-manifest.json",
   "collection:main": "dist/collection/index.js",
-  "unpkg": "dist/js-console-widget/js-console-widget.esm.js",
+  "unpkg": "dist/js-console-mirror/js-console-mirror.esm.js",
   "exports": {
     ".": {
-      "import": "./dist/js-console-widget/js-console-widget.esm.js",
-      "require": "./dist/js-console-widget/js-console-widget.cjs.js"
+      "import": "./dist/js-console-mirror/js-console-mirror.esm.js",
+      "require": "./dist/js-console-mirror/js-console-mirror.cjs.js"
     },
     "./my-component": {
       "import": "./dist/components/my-component.js",
       "types": "./dist/components/my-component.d.ts"
     },
-    "./js-console-widget": {
-      "import": "./dist/components/js-console-widget.js",
-      "types": "./dist/components/js-console-widget.d.ts"
+    "./js-console-mirror": {
+      "import": "./dist/components/js-console-mirror.js",
+      "types": "./dist/components/js-console-mirror.d.ts"
     },
     "./loader": {
       "import": "./loader/index.js",

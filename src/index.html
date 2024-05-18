@@ -3,12 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>JSConsoleWidget Example</title>
+    <title>JSConsolemirror Example</title>
     <script type="module">
-      import '/build/js-console-widget.esm.js';
+      import '/build/js-console-mirror.esm.js';
 
       setTimeout(() => {
-        console.log('Hello, ConsoleWidget!');
+        console.log('Hello, Consolemirror!');
         console.error('This is an error message.');
         console.warn('This is a warning message.');
         console.info('This is an info message.');
@@ -26,22 +26,22 @@
       }, 2000);
     </script>
     <style>
-      js-console-widget {
-        --console-widget-background: #282c34;
-        --console-widget-color: #61dafb;
-        --console-widget-title-color: #61dafb;
-        --console-widget-log-background: #20232a;
-        --console-widget-log-border: #555;
-        --console-widget-log-color-info: #5bc0de;
-        --console-widget-log-color-log: #ffffff;
-        --console-widget-log-color-debug: #6c757d;
-        --console-widget-log-color-warn: #f0ad4e;
-        --console-widget-log-color-error: #d9534f;
+      js-console-mirror {
+        --console-mirror-background: #282c34;
+        --console-mirror-color: #61dafb;
+        --console-mirror-title-color: #61dafb;
+        --console-mirror-log-background: #20232a;
+        --console-mirror-log-border: #555;
+        --console-mirror-log-color-info: #5bc0de;
+        --console-mirror-log-color-log: #ffffff;
+        --console-mirror-log-color-debug: #6c757d;
+        --console-mirror-log-color-warn: #f0ad4e;
+        --console-mirror-log-color-error: #d9534f;
         height: 200px;
       }
     </style>
   </head>
   <body>
-    <js-console-widget></js-console-widget>
+    <js-console-mirror></js-console-mirror>
   </body>
 </html>

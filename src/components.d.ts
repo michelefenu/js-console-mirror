@@ -6,32 +6,32 @@
  */
 import { HTMLStencilElement, JSXBase } from "@stencil/core/internal";
 export namespace Components {
-    interface JsConsoleWidget {
+    interface JsConsoleMirror {
     }
 }
 declare global {
-    interface HTMLJsConsoleWidgetElement extends Components.JsConsoleWidget, HTMLStencilElement {
+    interface HTMLJsConsoleMirrorElement extends Components.JsConsoleMirror, HTMLStencilElement {
     }
-    var HTMLJsConsoleWidgetElement: {
-        prototype: HTMLJsConsoleWidgetElement;
-        new (): HTMLJsConsoleWidgetElement;
+    var HTMLJsConsoleMirrorElement: {
+        prototype: HTMLJsConsoleMirrorElement;
+        new (): HTMLJsConsoleMirrorElement;
     };
     interface HTMLElementTagNameMap {
-        "js-console-widget": HTMLJsConsoleWidgetElement;
+        "js-console-mirror": HTMLJsConsoleMirrorElement;
     }
 }
 declare namespace LocalJSX {
-    interface JsConsoleWidget {
+    interface JsConsoleMirror {
     }
     interface IntrinsicElements {
-        "js-console-widget": JsConsoleWidget;
+        "js-console-mirror": JsConsoleMirror;
     }
 }
 export { LocalJSX as JSX };
 declare module "@stencil/core" {
     export namespace JSX {
         interface IntrinsicElements {
-            "js-console-widget": LocalJSX.JsConsoleWidget & JSXBase.HTMLAttributes<HTMLJsConsoleWidgetElement>;
+            "js-console-mirror": LocalJSX.JsConsoleMirror & JSXBase.HTMLAttributes<HTMLJsConsoleMirrorElement>;
         }
     }
 }

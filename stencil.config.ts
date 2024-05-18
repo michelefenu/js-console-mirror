@@ -6,7 +6,7 @@ import { vueOutputTarget } from '@stencil/vue-output-target';
 const angularValueAccessorBindings: ValueAccessorConfig[] = [];
 
 export const config: Config = {
-  namespace: 'js-console-widget',
+  namespace: 'js-console-mirror',
   outputTargets: [
     {
       type: 'dist',
@@ -25,17 +25,18 @@ export const config: Config = {
       serviceWorker: null, // disable service workers
     },
     reactOutputTarget({
-      componentCorePackage: 'js-console-widget',
+      componentCorePackage: 'js-console-mirror',
       proxiesFile: '../react-component-library/src/components.ts',
     }),
     angularOutputTarget({
-      componentCorePackage: 'js-console-widget',
+      componentCorePackage: 'js-console-mirror',
+      outputType: "standalone",
       directivesProxyFile: '../angular-component-library/src/directives/proxies.ts',
       directivesArrayFile: '../angular-component-library/src/directives/index.ts',
       valueAccessorConfigs: angularValueAccessorBindings,
     }),
     vueOutputTarget({
-      componentCorePackage: 'js-console-widget',
+      componentCorePackage: 'js-console-mirror',
       proxiesFile: '../vue-component-library/src/proxies.ts',
     }),
   ],

@@ -1,4 +1,4 @@
-# js-console-widget
+# js-console-mirror
 
 
 

@@ -14,11 +14,11 @@ interface Log {
 }
 
 @Component({
-  tag: 'js-console-widget',
-  styleUrl: 'js-console-widget.css',
+  tag: 'js-console-mirror',
+  styleUrl: 'js-console-mirror.css',
   shadow: true,
 })
-export class JsConsoleWidget {
+export class JsConsolemirror {
   @State() logs: Log[] = [];
 
   @Element() el: HTMLElement;

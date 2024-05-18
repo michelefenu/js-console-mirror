@@ -1,20 +1,20 @@
 :host {
-  --console-widget-background: #333;
-  --console-widget-color: #fff;
-  --console-widget-title-color: #fff;
-  --console-widget-log-background: #444;
-  --console-widget-log-border: #555;
-  --console-widget-log-color-info: #5bc0de;
-  --console-widget-log-color-log: #ffffff;
-  --console-widget-log-color-debug: #6c757d;
-  --console-widget-log-color-warn: #f0ad4e;
-  --console-widget-log-color-error: #d9534f;
+  --console-mirror-background: #333;
+  --console-mirror-color: #fff;
+  --console-mirror-title-color: #fff;
+  --console-mirror-log-background: #444;
+  --console-mirror-log-border: #555;
+  --console-mirror-log-color-info: #5bc0de;
+  --console-mirror-log-color-log: #ffffff;
+  --console-mirror-log-color-debug: #6c757d;
+  --console-mirror-log-color-warn: #f0ad4e;
+  --console-mirror-log-color-error: #d9534f;
 
   display: block;
   font-family: sans-serif;
-  background: var(--console-widget-background);
-  color: var(--console-widget-color);
-  font-size: var(--console-widget-font-size, 14px);
+  background: var(--console-mirror-background);
+  color: var(--console-mirror-color);
+  font-size: var(--console-mirror-font-size, 14px);
   padding: 10px;
   border-radius: 5px;
   height: 200px;
@@ -24,7 +24,7 @@
 .title {
   font-size: 1.1rem;
   margin-bottom: 8px;
-  color: var(--console-widget-title-color);
+  color: var(--console-mirror-title-color);
 }
 
 .log-section {
@@ -36,8 +36,8 @@
   font-family: monospace;
   font-size: 0.7rem;
   padding-bottom: 6px;
-  border-bottom: 1px solid var(--console-widget-log-border);
-  background-color: var(--console-widget-log-background);
+  border-bottom: 1px solid var(--console-mirror-log-border);
+  background-color: var(--console-mirror-log-background);
   padding: 5px;
   width: 100%;
 }
@@ -49,21 +49,21 @@
 }
 
 .log-section .log-line .info {
-  color: var(--console-widget-log-color-info);
+  color: var(--console-mirror-log-color-info);
 }
 
 .log-section .log-line .log {
-  color: var(--console-widget-log-color-log);
+  color: var(--console-mirror-log-color-log);
 }
 
 .log-section .log-line .debug {
-  color: var(--console-widget-log-color-debug);
+  color: var(--console-mirror-log-color-debug);
 }
 
 .log-section .log-line .warn {
-  color: var(--console-widget-log-color-warn);
+  color: var(--console-mirror-log-color-warn);
 }
 
 .log-section .log-line .error {
-  color: var(--console-widget-log-color-error);
+  color: var(--console-mirror-log-color-error);
 }

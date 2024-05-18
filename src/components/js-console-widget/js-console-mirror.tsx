@@ -18,7 +18,7 @@ interface Log {
   styleUrl: 'js-console-mirror.css',
   shadow: true,
 })
-export class JsConsolemirror {
+export class JsConsoleMirror {
   @State() logs: Log[] = [];
 
   @Element() el: HTMLElement;

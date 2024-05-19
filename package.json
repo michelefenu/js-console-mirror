@@ -1,7 +1,8 @@
 {
   "name": "js-console-mirror",
-  "version": "0.0.9",
-  "description": "A virtual JavaScript console to test webapps in mobile browsers.",
+  "version": "1.0.0",
+  "description": "A virtual JavaScript console to mirror console output on the HTML page",
+  "keywords": ["js-console", "debug"],
   "main": "dist/index.cjs.js",
   "module": "dist/index.js",
   "es2015": "dist/esm/index.mjs",

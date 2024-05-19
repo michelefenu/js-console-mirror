@@ -8,6 +8,10 @@ JS Console Mirror is a web component built with Stencil that provides a virtual 
 - **Customizable Styles:** Easily customize the appearance of the console output using CSS variables.
 - **Framework Integration:** Can be integrated into any web application, including Angular, React, Vue, and plain HTML/JavaScript.
 
+### Demo
+
+Check out the live demo hosted at https://michelefenu.github.io/js-console-mirror/.
+
 ## Installation
 
 To install the component library, use npm:

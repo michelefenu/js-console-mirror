@@ -17,7 +17,7 @@ export const config: Config = {
     {
       type: 'www',
       serviceWorker: null, 
-      dir: './examples/vanilla'
+      dir: './examples/vanilla',
     }
   ],
   testing: {

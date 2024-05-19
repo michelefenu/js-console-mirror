@@ -37,7 +37,7 @@ export class WebComponentsModule {
 }
 ```
 
-### 2. Update Angular Module
+#### 2. Update Angular Module
 In your app.module.ts, import the WebComponentsModule:
 
 ```typescript
@@ -61,7 +61,7 @@ import { WebComponentsModule } from './web-components.module';
 export class AppModule { }
 ```
 
-#### 4. Use the Web Component
+#### 3. Use the Web Component
 You can now use the JS Console Mirror component in your Angular templates. For example, in app.component.html:
 
 ```html

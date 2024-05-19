@@ -67,3 +67,12 @@ You can now use the JS Console Mirror component in your Angular templates. For e
 ```html
 <js-console-mirror></js-console-mirror>
 ```
+
+#### 5. Serve Your Angular Application
+Run your Angular application:
+
+```bash
+ng serve
+```
+
+You should now see the JS Console Mirror component rendered within your Angular application.

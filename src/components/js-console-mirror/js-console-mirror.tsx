@@ -59,13 +59,11 @@ export class JsConsoleMirror {
         this.originalDebug.apply(console, args);
       };
 
-      // Intercetta errori globali
       window.onerror = (message, source, lineno, colno) => {
         this.logs = [...this.logs, { level: ErrorLevel.error, message: `${message} at ${source}:${lineno}:${colno}` }];
         return false; // Let the default handler run
       };
 
-      // Intercetta promesse rifiutate non gestite
       window.addEventListener('unhandledrejection', this.handlePromiseRejection);
 
       this.isConsoleOverridden = true;
@@ -86,7 +84,6 @@ export class JsConsoleMirror {
   }
 
   componentDidUpdate() {
-    // Scroll to the bottom of the log container
     if (this.logContainer) {
       this.logContainer.scrollTop = this.logContainer.scrollHeight;
     }

@@ -39,7 +39,6 @@
   border-bottom: 1px solid var(--console-mirror-log-border);
   background-color: var(--console-mirror-log-background);
   padding: 5px;
-  width: 100%;
 }
 
 .log-section .log-line .log-level {
